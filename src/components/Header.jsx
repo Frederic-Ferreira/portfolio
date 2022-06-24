@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Lottie from 'lottie-web';
 
 import NameAnimation from '../animations/name.json';
@@ -17,9 +16,9 @@ function Header() {
     <header>
       <div id="svg-container"></div>
       <div id="links">
-        <Link to="/">Accueil</Link>
-        <Link to="/">Projets</Link>
-        <Link to="/">Contact</Link>
+        <a to="#home">Accueil</a>
+        <a to="/">Projets</a>
+        <a to="/">Contact</a>
       </div>
     </header>
   );
