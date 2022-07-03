@@ -6,7 +6,7 @@ import lazy from '../images/lazy-img.png';
 function Home() {
   return (
     <section class="home">
-      <div className="section section--hidden" id="home-content">
+      <div className="section section__hidden" id="home-content">
         <img
           className="lazy-img"
           src={lazy}
@@ -14,7 +14,7 @@ function Home() {
           data-src={img}
         />
         <div className="column-wrapper">
-          <h2>Hello there!</h2>
+          <h2>Welcome!</h2>
           <p>
             Bienvenue sur mon site professionnel, je m'appelle
             Frédéric Ferreira et je suis un développeur{' '}

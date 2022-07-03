@@ -11,6 +11,7 @@ $light-blue: #f2fcfe;
 $blue: #1c92d2;
 $light-pink: #ffdde1;
 $pink: #e27482;
+$orange: rgba(242, 152, 74, 0.9);
 
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap');
 
@@ -59,10 +60,13 @@ html {
   z-index: -1;
   transform: scale(1.07, 1.05) skewX(-15deg);
   border-radius: 5px;
-  background-image: $pink-linear;
+  background-image: $yellow-linear;
+}
+.section {
+  transition: transform 1s, opacity 1s;
 }
 
-.section--hidden {
+.section__hidden {
   opacity: 0;
   transform: translateY(8rem);
 }
@@ -124,10 +128,6 @@ header {
     padding: 10rem 5rem;
     @include flexCenter();
 
-    .section {
-      transition: transform 1s, opacity 1s;
-    }
-
     #home-content {
       display: flex;
       position: relative;
@@ -135,6 +135,10 @@ header {
       z-index: -2;
       padding: 10%;
       border-radius: 20px;
+
+      span {
+        color: $light-blue;
+      }
 
       img {
         height: 40rem;
@@ -154,8 +158,8 @@ header {
         font-family: 'Fredericka the Great', sans-serif;
         font-size: 4rem;
         height: 7rem;
-        color: $pink;
-        margin-bottom: 2rem;
+        color: $orange;
+        margin-bottom: 1rem;
       }
 
       p {
@@ -172,31 +176,92 @@ header {
 
   /* PROJECTS */
   #projects {
-    height: 70rem;
+    height: 100rem;
     padding: 10rem;
 
-    #projects-content {
-      width: 100%;
+    #projects-title {
+      background-color: $pink;
+      @include flexCenter();
+      padding: 5rem;
+      height: 25rem;
+      border-radius: 25px;
 
+      p {
+        font-family: 'Send Flowers', sans-serif;
+        font-size: 4rem;
+        color: $light-blue;
+      }
+    }
+
+    #projects-content {
+      margin-top: 10rem;
       ul {
-        display: grid;
-        justify-items: center;
-        align-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        @include flexCenter();
         flex-wrap: wrap;
-        gap: 5rem;
+        column-gap: 20rem;
+        row-gap: 5rem;
 
         li {
-          border: 5px solid #272727;
-          border-radius: 5px;
-          transition: all ease 0.3s;
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-          }
           video {
+            border: 5px solid #272727;
+            border-radius: 5px;
             height: 200px;
             max-width: 400px;
+            transition: all ease 0.3s;
+
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.1);
+            }
+          }
+
+          .row-wrapper {
+            margin-top: 3rem;
+            width: 100%;
+            @include flexCenter();
+            gap: 5rem;
+
+            a {
+              position: relative;
+
+              &.github {
+                &:hover::before {
+                  content: 'Lien GitHub';
+                  color: white;
+                  font-size: 15px;
+                  background-color: rgba(0, 0, 0, 0.653);
+                  @include flexCenter();
+                  height: 4rem;
+                  width: 8.5rem;
+                  position: absolute;
+                  left: -11rem;
+                  top: 1rem;
+                }
+              }
+
+              &.netlify {
+                &:hover::after {
+                  content: "Démo de l'application";
+                  color: white;
+                  font-size: 15px;
+                  background-color: rgba(0, 0, 0, 0.653);
+                  @include flexCenter();
+                  height: 4rem;
+                  width: 15rem;
+                  position: absolute;
+                  left: 9rem;
+                  top: 1rem;
+                }
+              }
+            }
+
+            img {
+              padding: 5px;
+              border: 2px solid $orange;
+              border-radius: 50%;
+              height: 6rem;
+              width: 6rem;
+            }
           }
         }
       }

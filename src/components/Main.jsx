@@ -34,7 +34,7 @@ function Main() {
 
     if (!entry.isIntersecting) return;
 
-    entry.target.classList.remove('section--hidden');
+    entry.target.classList.remove('section__hidden');
     observer.unobserve(entry.target);
   };
 

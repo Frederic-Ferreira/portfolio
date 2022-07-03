@@ -7,6 +7,9 @@ import afaire from '../images/afaire.png';
 import shoepi from '../images/shoepi.png';
 import meteo from '../images/meteo.png';
 
+import github from '../images/github.png';
+import netlify from '../images/netlify.png';
+
 function Projects() {
   const autoPlay = (e) => {
     e.target.play();
@@ -18,12 +21,35 @@ function Projects() {
 
   return (
     <div id="projects">
-      <div className="section section--hidden" id="projects-content">
+      <div className="section section__hidden" id="projects-title">
+        <p>
+          Durant mon apprentissage, j'ai eu l'occasion de travailler
+          sur de multiples projets ... mais il y a quatre d'entre eux
+          sur lesquels j'ai porté une attention plus particulière.
+        </p>
+      </div>
+      <div className="section section__hidden" id="projects-content">
         <ul>
           <li>
             <video onMouseEnter={autoPlay} onMouseLeave={stopPlay}>
               <source src={memory} />
             </video>
+            <div className="row-wrapper">
+              <a
+                className="github"
+                target="_blank"
+                href="https://github.com/Frederic-Ferreira/memory-card-app"
+              >
+                <img src={github} alt="lien github" />
+              </a>
+              <a
+                className="netlify"
+                target="_blank"
+                href="https://memory-card-by-fred.netlify.app/"
+              >
+                <img src={netlify} alt="lien du preview de l'app" />
+              </a>
+            </div>
           </li>
           <li>
             <video
@@ -33,6 +59,22 @@ function Projects() {
             >
               <source src={shoepify} />
             </video>
+            <div className="row-wrapper">
+              <a
+                className="github"
+                target="_blank"
+                href="https://github.com/Frederic-Ferreira/shoepify-app"
+              >
+                <img src={github} alt="lien github" />
+              </a>
+              <a
+                className="netlify"
+                target="_blank"
+                href="https://shoepify-app-by-fred.netlify.app/"
+              >
+                <img src={netlify} alt="lien du preview de l'app" />
+              </a>
+            </div>
           </li>
           <li>
             <video
@@ -42,6 +84,22 @@ function Projects() {
             >
               <source src={weather} />
             </video>
+            <div className="row-wrapper">
+              <a
+                className="github"
+                target="_blank"
+                href="https://github.com/Frederic-Ferreira/weather-app"
+              >
+                <img src={github} alt="lien github" />
+              </a>
+              <a
+                className="netlify"
+                target="_blank"
+                href="https://weather-meteo-by-fred.netlify.app/"
+              >
+                <img src={netlify} alt="lien du preview de l'app" />
+              </a>
+            </div>
           </li>
           <li>
             <video
@@ -51,6 +109,22 @@ function Projects() {
             >
               <source src={todo} />
             </video>
+            <div className="row-wrapper">
+              <a
+                className="github"
+                target="_blank"
+                href="https://github.com/Frederic-Ferreira/todo-list-app"
+              >
+                <img src={github} alt="lien github" />
+              </a>
+              <a
+                className="netlify"
+                target="_blank"
+                href="https://todo-list-by-fred.netlify.app/"
+              >
+                <img src={netlify} alt="lien du preview de l'app" />
+              </a>
+            </div>
           </li>
         </ul>
       </div>
