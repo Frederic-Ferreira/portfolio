@@ -68,7 +68,7 @@ function Main() {
     document.querySelectorAll('.section').forEach(function (section) {
       sectionObserver.observe(section);
 
-      headerObserver.observe(document.querySelector('.home'));
+      headerObserver.observe(document.querySelector('#home'));
     });
   }, []);
 
@@ -76,6 +76,8 @@ function Main() {
     <div id="main">
       <Home />
       <Projects />
+      <div id="waves-1"></div>
+      <div id="waves-2"></div>
       <Contact />
     </div>
   );

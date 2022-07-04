@@ -22,11 +22,11 @@ function Projects() {
   return (
     <div id="projects">
       <div className="section section__hidden" id="projects-title">
-        <p>
+        <q>
           Durant mon apprentissage, j'ai eu l'occasion de travailler
           sur de multiples projets ... mais il y a quatre d'entre eux
           sur lesquels j'ai porté une attention plus particulière.
-        </p>
+        </q>
       </div>
       <div className="section section__hidden" id="projects-content">
         <ul>

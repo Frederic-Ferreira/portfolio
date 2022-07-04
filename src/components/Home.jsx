@@ -5,7 +5,7 @@ import lazy from '../images/lazy-img.png';
 
 function Home() {
   return (
-    <section class="home">
+    <section id="home">
       <div className="section section__hidden" id="home-content">
         <img
           className="lazy-img"

@@ -1,10 +1,6 @@
 /* --------- GENERAL --------- */
 
-$yellow-linear: linear-gradient(
-  to right,
-  rgba(242, 200, 76, 0.9),
-  rgba(242, 152, 74, 0.9)
-);
+$yellow-linear: linear-gradient(to right, #f2c84ce6, #f2984ae6);
 $blue-linear: linear-gradient(to right, #f2fcfe, #1c92d2);
 $pink-linear: linear-gradient(to right, #f2fcfe, #e27482);
 $light-blue: #f2fcfe;
@@ -76,6 +72,9 @@ html {
 /* ----------- HEADER ----------- */
 
 header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,9 +124,10 @@ header {
 /* ----------- MAIN ----------- */
 
 #main {
+  margin-top: 10rem;
   /* HOME */
 
-  .home {
+  #home {
     padding: 10vh 5vw;
     @include flexCenter();
 
@@ -179,7 +179,8 @@ header {
 
   /* PROJECTS */
   #projects {
-    height: 100rem;
+    margin-top: 5rem;
+    height: 120rem;
     position: relative;
 
     #projects-title {
@@ -187,7 +188,7 @@ header {
       padding: 5vh 10vw;
       height: 25rem;
       width: 100%;
-      background-color: pink;
+      background-color: $pink;
 
       // &::before {
       //   content: '';
@@ -200,18 +201,22 @@ header {
       //   background-color: white;
       // }
 
-      p {
+      q {
         font-family: 'Send Flowers', sans-serif;
         font-size: 4rem;
-        color: $grey;
+        color: white;
       }
     }
 
     #projects-content {
-      padding: 10vh;
       margin-top: 10rem;
+      padding: 10vh;
 
       hr {
+        background-color: $pink;
+        border: none;
+        width: 3px;
+
         height: 33rem;
       }
 
@@ -222,7 +227,7 @@ header {
 
         li {
           video {
-            border: 5px solid $grey;
+            border: 3px solid $grey;
             border-radius: 5px;
             height: 200px;
             max-width: 400px;
@@ -275,6 +280,7 @@ header {
             }
 
             img {
+              background-color: white;
               padding: 5px;
               border: 2px solid $orange;
               border-radius: 50%;
@@ -287,7 +293,27 @@ header {
     }
   }
 
-  /* PROJECTS */
+  /* CONTACT */
+  #waves-1,
+  #waves-2 {
+    aspect-ratio: 960/50;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  #waves-1 {
+    background-image: url('../images/waves-1.svg');
+  }
+  #waves-2 {
+    transform: scaleY(-1);
+    background-image: url('../images/waves-2.svg');
+  }
+
+  #contact {
+    height: 70rem;
+    // margin-top: 10rem;
+  }
 }
 
 /* ----------- ANIMATIONS ----------- */
