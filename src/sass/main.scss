@@ -12,6 +12,7 @@ $blue: #1c92d2;
 $light-pink: #ffdde1;
 $pink: #e27482;
 $orange: rgba(242, 152, 74, 0.9);
+$grey: #272727;
 
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap');
 
@@ -26,6 +27,7 @@ $orange: rgba(242, 152, 74, 0.9);
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @mixin flexCenter {
@@ -86,6 +88,7 @@ header {
     position: fixed;
     width: 100%;
     animation: 0.7s ease appears;
+    z-index: 3;
   }
 
   #svg-container {
@@ -125,7 +128,7 @@ header {
   /* HOME */
 
   .home {
-    padding: 10rem 5rem;
+    padding: 10vh 5vw;
     @include flexCenter();
 
     #home-content {
@@ -134,7 +137,7 @@ header {
       background-color: $light-blue;
       z-index: -2;
       padding: 10%;
-      border-radius: 20px;
+      border-radius: 1% 33% 50% 50%;
 
       span {
         color: $light-blue;
@@ -149,7 +152,7 @@ header {
       .column-wrapper {
         margin-left: 3.3rem;
         text-align: center;
-        max-width: 40rem;
+        max-width: 40%;
         height: 40rem;
         text-overflow: ellipsis;
       }
@@ -177,33 +180,49 @@ header {
   /* PROJECTS */
   #projects {
     height: 100rem;
-    padding: 10rem;
+    position: relative;
 
     #projects-title {
-      background-color: $pink;
       @include flexCenter();
-      padding: 5rem;
+      padding: 5vh 10vw;
       height: 25rem;
-      border-radius: 25px;
+      width: 100%;
+      background-color: pink;
+
+      // &::before {
+      //   content: '';
+      //   width: 10%;
+      //   height: 25%;
+      //   position: absolute;
+      //   border-radius: 50%;
+      //   left: 2rem;
+      //   top: -15rem;
+      //   background-color: white;
+      // }
 
       p {
         font-family: 'Send Flowers', sans-serif;
         font-size: 4rem;
-        color: $light-blue;
+        color: $grey;
       }
     }
 
     #projects-content {
+      padding: 10vh;
       margin-top: 10rem;
+
+      hr {
+        height: 33rem;
+      }
+
       ul {
         @include flexCenter();
         flex-wrap: wrap;
-        column-gap: 20rem;
-        row-gap: 5rem;
+        column-gap: 10rem;
 
         li {
           video {
-            border: 5px solid #272727;
+            border: 5px solid $grey;
             border-radius: 5px;
             height: 200px;
             max-width: 400px;
@@ -267,6 +286,8 @@ header {
       }
     }
   }
+
+  /* PROJECTS */
 }
 
 /* ----------- ANIMATIONS ----------- */

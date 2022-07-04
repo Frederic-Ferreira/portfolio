@@ -51,6 +51,7 @@ function Projects() {
               </a>
             </div>
           </li>
+          <hr />
           <li>
             <video
               onMouseEnter={autoPlay}
@@ -101,6 +102,7 @@ function Projects() {
               </a>
             </div>
           </li>
+          <hr />
           <li>
             <video
               onMouseEnter={autoPlay}

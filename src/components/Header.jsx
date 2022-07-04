@@ -16,9 +16,9 @@ function Header() {
     <header>
       <div id="svg-container"></div>
       <div id="links">
-        <a to="#home">Accueil</a>
-        <a to="/">Projets</a>
-        <a to="/">Contact</a>
+        <a href="#home">Accueil</a>
+        <a href="#projects">Projets</a>
+        <a to="/">A propos</a>
       </div>
     </header>
   );

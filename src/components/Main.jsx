@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 import Home from './Home';
 import Projects from './Projects';
+import Contact from './Contact';
 
 function Main() {
   // Lazy images loading
@@ -75,6 +76,7 @@ function Main() {
     <div id="main">
       <Home />
       <Projects />
+      <Contact />
     </div>
   );
 }
