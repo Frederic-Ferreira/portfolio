@@ -10,7 +10,9 @@ $pink: #e27482;
 $orange: rgba(242, 152, 74, 0.9);
 $grey: #272727;
 
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap&family=Comfortaa:wght@300;500;700');
+
+// @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Indie+Flower&family=Manrope:wght@200;400;700&family=Oxygen:wght@300;400;700&family=Sora:wght@100;300;500;700&display=swap');
 
 * {
   padding: 0;
@@ -179,8 +181,9 @@ header {
 
   /* PROJECTS */
   #projects {
+    padding-top: 8rem;
     margin-top: 5rem;
-    height: 120rem;
+    min-height: 120rem;
     position: relative;
 
     #projects-title {
@@ -201,7 +204,7 @@ header {
       //   background-color: white;
       // }
 
-      q {
+      p {
         font-family: 'Send Flowers', sans-serif;
         font-size: 4rem;
         color: white;
@@ -296,7 +299,7 @@ header {
   /* CONTACT */
   #waves-1,
   #waves-2 {
-    aspect-ratio: 960/50;
+    aspect-ratio: 960/33;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -310,9 +313,116 @@ header {
     background-image: url('../images/waves-2.svg');
   }
 
-  #contact {
-    height: 70rem;
-    // margin-top: 10rem;
+  #about {
+    #skills-set {
+      height: 50rem;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20rem;
+      padding: 10rem;
+      font-family: 'Comfortaa', sans-serif;
+
+      img {
+        height: 33px;
+        width: 33px;
+        position: relative;
+        top: 10px;
+        margin-right: 1rem;
+      }
+
+      h1 {
+        font-family: 'Fredericka the Great', sans-serif;
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+        background-color: $pink;
+        padding: 1.5rem;
+        border-radius: 33px;
+        margin-bottom: 3rem;
+      }
+
+      .bold {
+        font-weight: bold;
+        margin: 1rem;
+      }
+
+      #skills {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 2rem;
+        max-width: 50rem;
+
+        p {
+          position: relative;
+
+          img {
+            position: absolute;
+            top: -1rem;
+            left: -5rem;
+          }
+        }
+      }
+
+      #setup {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 2rem;
+      }
+    }
+
+    #contact {
+      @include flexCenter();
+      gap: 5rem;
+      height: 70rem;
+      padding: 15vh 10vw;
+      font-family: 'Comfortaa', sans-serif;
+      background-image: url('../images/fond-contact.png');
+      background-position: center;
+      background-size: 90%;
+      background-repeat: no-repeat;
+      font-size: 2rem;
+
+      h2 {
+        font-family: 'Indie Flower', sans-serif;
+        position: relative;
+        bottom: 5rem;
+        font-size: 4rem;
+        text-decoration: underline;
+        color: $light-pink;
+      }
+
+      // margin-top: 10rem;
+
+      img {
+        height: 500px;
+        width: 400px;
+        border-radius: 10px;
+      }
+
+      #text {
+        max-width: 33rem;
+
+        #infos {
+          span {
+            border-bottom: 1px solid black;
+            font-weight: bold;
+            color: $grey;
+          }
+
+          p {
+            margin-top: 1rem;
+          }
+
+          p,
+          a {
+            color: white;
+          }
+        }
+      }
+    }
   }
 }
 
