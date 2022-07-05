@@ -17,10 +17,8 @@ function Home() {
           <h2>Welcome!</h2>
           <p>
             Bienvenue sur mon site professionnel, je m'appelle
-            Frédéric Ferreira et je suis un développeur{' '}
-            <span className="highlight">Front End junior</span>,
-            spécialisé dans le framework{' '}
-            <span className="highlight">React</span>.
+            Frédéric Ferreira et je suis un développeur Front End
+            junior, spécialisé dans le framework React.
           </p>
         </div>
       </div>
