@@ -1,9 +1,8 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import Projects from './components/Projects';
 
 function App() {
-  const handleClick = (e) => {
+  const handleClick = () => {
     const overlay = document.getElementById('side-bar');
     const contains = overlay.classList.contains('hidden')
       ? 'hidden'
@@ -12,7 +11,7 @@ function App() {
       ? 'visible'
       : 'hidden';
 
-    document.querySelector('.bi').classList.toggle('active');
+    document.querySelector('.bi-list').classList.toggle('active');
     overlay.classList.remove(contains);
     overlay.classList.add(add);
   };
@@ -20,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <div className="hidden" id="side-bar">
+        <i onClick={handleClick} class="bi bi-x-lg"></i>
         <a onClick={handleClick} href="#">
           Accueil
         </a>

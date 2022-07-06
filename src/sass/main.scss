@@ -74,6 +74,7 @@ body {
 #side-bar {
   @include flexColumn();
   justify-content: center;
+  position: relative;
   gap: 7vh;
   font-size: 3rem;
   position: fixed;
@@ -83,6 +84,18 @@ body {
   background-color: #e27483bf;
   animation: 0.5s ease overlay-appears;
   z-index: 3;
+
+  .bi {
+    position: absolute;
+    top: 10rem;
+    right: 3rem;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      color: $blue;
+    }
+  }
 
   a {
     font-family: 'Comfortaa', Tahoma, Geneva, Verdana, sans-serif;
@@ -107,7 +120,7 @@ header {
   justify-content: space-between;
   height: 10vh;
   background: $yellow-linear;
-  padding: 0 5vw 0 2vw;
+  padding-right: 5vw;
   font-family: 'Send Flowers', sans-serif;
 
   &.sticky {
@@ -119,7 +132,7 @@ header {
 
   #svg-container {
     height: 100%;
-    width: 20vw;
+    width: 25vw;
     overflow: hidden;
     transition: all 0.3s ease;
 
@@ -190,7 +203,7 @@ header {
       h2 {
         font-family: 'Fredericka the Great', sans-serif;
         font-size: 4rem;
-        height: 7rem;
+        margin-bottom: 2.5vh;
         color: $orange;
       }
 
@@ -209,7 +222,6 @@ header {
   /* PROJECTS */
   #projects {
     padding-top: 10vh;
-    min-height: 120rem;
     position: relative;
 
     #projects-title {
@@ -503,6 +515,10 @@ header {
     }
   }
 
+  #main #about #contact {
+    background-size: 100%;
+  }
+
   #main #about #skills-set {
     @include flexColumn();
     align-items: center;
@@ -624,6 +640,113 @@ header {
         cursor: pointer;
         color: $blue;
       }
+    }
+  }
+
+  #main {
+    #home #home-content {
+      p {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    #projects #projects-content ul li {
+      width: 70%;
+      height: 50%;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  #main {
+    #home #home-content {
+      p {
+        font-size: 1.25rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    #projects #projects-title p {
+      font-size: 1.5rem;
+    }
+
+    #about #skills-set {
+      & h1 {
+        font-size: 2rem;
+      }
+
+      & #skills,
+      & #setup {
+        max-width: 40vw;
+      }
+    }
+
+    #about #contact {
+      & h2 {
+        position: static;
+      }
+      background-size: 120%;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  #side-bar {
+    font-size: 2rem;
+  }
+
+  #main {
+    #home #home-content {
+      p {
+        font-size: 0.75rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    #projects #projects-title p {
+      font-size: 1rem;
+    }
+
+    #projects #projects-content ul li .row-wrapper img {
+      height: 33px;
+      width: 33px;
+    }
+
+    #projects #projects-content ul li {
+      margin-bottom: 3.3rem;
+    }
+
+    #about #skills-set #skills,
+    #about #skills-set #setup {
+      font-size: 1.25rem;
+    }
+    #about #skills-set h1 {
+      font-size: 1.25rem;
+    }
+
+    #about #skills-set #setup {
+      margin-top: 2rem;
+    }
+
+    #about #contact {
+      background-size: 130%;
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    #contact #text #infos p {
+      font-size: 0.75rem;
     }
   }
 }
