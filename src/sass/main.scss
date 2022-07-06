@@ -53,6 +53,10 @@ html {
   transform: translateY(8rem);
 }
 
+.active {
+  transform: rotate(-90deg);
+}
+
 /* ----------- HEADER ----------- */
 
 header {
@@ -64,7 +68,7 @@ header {
   justify-content: space-between;
   height: 10vh;
   background: $yellow-linear;
-  padding: 0 10vw 0 2vw;
+  padding: 0 5vw 0 2vw;
   font-family: 'Send Flowers', sans-serif;
 
   &.sticky {
@@ -103,6 +107,10 @@ header {
       }
     }
   }
+  i,
+  #side-bar {
+    display: none;
+  }
 }
 
 /* ----------- MAIN ----------- */
@@ -124,7 +132,7 @@ header {
       border-radius: 1% 33% 50% 50%;
 
       span {
-        color: $light-blue;
+        color: $orange;
       }
 
       img {
@@ -137,7 +145,7 @@ header {
         margin-left: 3vw;
         text-align: center;
         max-width: 40%;
-        max-height: 40rem;
+        max-height: 60%;
         text-overflow: ellipsis;
       }
 
@@ -146,7 +154,6 @@ header {
         font-size: 4rem;
         height: 7rem;
         color: $orange;
-        margin-bottom: 1rem;
       }
 
       p {
@@ -164,7 +171,6 @@ header {
   /* PROJECTS */
   #projects {
     padding-top: 10vh;
-    margin-top: 5rem;
     min-height: 120rem;
     position: relative;
 
@@ -259,8 +265,8 @@ header {
               padding: 5px;
               border: 2px solid $orange;
               border-radius: 50%;
-              height: 5vw;
-              width: 5vw;
+              height: 50px;
+              width: 50px;
             }
           }
         }
@@ -514,6 +520,80 @@ header {
         max-width: 25vw;
       }
       font-size: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header #links {
+    font-size: 2.25rem;
+  }
+
+  #main {
+    #home #home-content {
+      p {
+        font-size: 1.75rem;
+      }
+
+      h2 {
+        font-size: 2.25rem;
+      }
+    }
+
+    #projects #projects-title p {
+      font-size: 2rem;
+    }
+
+    #projects #projects-content ul li .row-wrapper img {
+      height: 45px;
+      width: 45px;
+    }
+
+    #about #skills-set {
+      & h1 {
+        font-size: 2rem;
+      }
+
+      & #skills,
+      & #setup {
+        font-size: 1.5rem;
+      }
+    }
+
+    #about #contact {
+      font-size: 1rem;
+      & h2 {
+        font-size: 2.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #side-bar {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.568);
+    z-index: 3;
+  }
+  header #links {
+    a {
+      display: none;
+    }
+
+    i {
+      display: block;
+      color: white;
+      font-size: 3rem;
+      margin-right: 5vw;
+      transition: all 0.5s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: $blue;
+      }
     }
   }
 }

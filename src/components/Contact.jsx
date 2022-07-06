@@ -87,9 +87,9 @@ function Contact() {
               <span>Linkedin :</span>{' '}
               <a
                 target="_blank"
-                href="www.linkedin.com/in/frederic-ferreira-developpeur"
+                href="https://linkedin.com/in/frederic-ferreira-developpeur"
               >
-                www.linkedin.com/in/frederic-ferreira-developpeur
+                https://linkedin.com/in/frederic-ferreira-developpeur
               </a>
             </p>
           </div>
