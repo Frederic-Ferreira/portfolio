@@ -33,7 +33,7 @@ function Header() {
         <a href="#">Accueil</a>
         <a href="#projects">Projets</a>
         <a href="#about">A propos</a>
-        <i onClick={handleClick} class="bi bi-list"></i>
+        <i onClick={handleClick} className="bi bi-list"></i>
       </div>
     </header>
   );

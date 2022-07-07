@@ -197,7 +197,6 @@ header {
         text-align: center;
         max-width: 40%;
         max-height: 60%;
-        text-overflow: ellipsis;
       }
 
       h2 {
@@ -210,11 +209,6 @@ header {
       p {
         font-family: 'Indie Flower', sans-serif;
         font-size: 3rem;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 7;
-        -webkit-box-orient: vertical;
       }
     }
   }
@@ -697,7 +691,7 @@ header {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   #side-bar {
     font-size: 2rem;
   }
