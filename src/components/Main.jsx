@@ -41,7 +41,7 @@ function Main() {
 
   const sectionObserver = new IntersectionObserver(revealSection, {
     root: null,
-    threshold: 0.25,
+    threshold: 0.15,
   });
 
   // Sticky nav bar
