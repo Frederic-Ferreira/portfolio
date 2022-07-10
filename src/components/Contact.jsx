@@ -6,6 +6,7 @@ import sass from '../images/sass.png';
 import redux from '../images/redux.png';
 import react from '../images/react.png';
 import vite from '../images/vite.png';
+import node from '../images/node.png';
 
 import mac from '../images/macbook-pro.png';
 import code from '../images/code.png';
@@ -18,8 +19,8 @@ function Contact() {
         <div id="skills">
           <h1>Compétences</h1>
           <p>
-            <img src={js} alt="logo javascript" /> Vanilla{' '}
-            <span className="bold">JavaScript</span>
+            <img src={js} alt="logo javascript" /> JavaScript{' '}
+            <span className="bold">EcmaScript</span>
           </p>
           <p>
             <img src={sass} alt="logo sass" /> Préprocesseur :
@@ -38,6 +39,10 @@ function Contact() {
             <img src={vite} alt="logo vite (module bundler)" /> Module
             Bundler :<span className="bold">Vite</span> (sait utiliser
             WebPack et Parcel)
+          </p>
+          <p>
+            <img src={node} alt="logo node js" /> JavaScript Runtime :
+            <span className="bold">Node JS</span>
           </p>
         </div>
         <div id="setup">
