@@ -1,7 +1,7 @@
 import React from 'react';
 
-import img from '../images/img.jpg';
-import lazy from '../images/lazy-img.png';
+import img from '../images/fred.png';
+import lazy from '../images/fred-lazy.png';
 
 function Home() {
   return (

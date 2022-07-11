@@ -1,5 +1,5 @@
-import lazy from '../images/lazy-profile.jpg';
 import img from '../images/profile.jpg';
+import lazy from '../images/lazy-profile.jpg';
 
 import js from '../images/js.png';
 import sass from '../images/sass.png';
