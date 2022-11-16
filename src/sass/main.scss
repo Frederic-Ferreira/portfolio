@@ -7,7 +7,7 @@ $light-blue: #f2fcfe;
 $blue: #1c92d2;
 $light-pink: #ffdde1;
 $pink: #e27482;
-$orange: rgba(242, 152, 74, 0.9);
+$orange: #ffa25c;
 $dark: #202020;
 $grey: #353535;
 $light-grey: #bebebe;
@@ -456,8 +456,9 @@ header {
       gap: 5vw;
       max-height: 70rem;
       padding: 15vh 10vw;
-      background-position: center;
-      background-size: 90%;
+      background-image: url("../images/fond-contact.png");
+      background-position: 60% 50%;
+      background-size: 33%;
       background-repeat: no-repeat;
       font-size: 2rem;
       color: white;
@@ -484,7 +485,7 @@ header {
         #infos {
           span {
             font-weight: 500;
-            color: $orange;
+            color: $dark;
           }
 
           p {
