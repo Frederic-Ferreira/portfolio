@@ -8,9 +8,17 @@ $blue: #1c92d2;
 $light-pink: #ffdde1;
 $pink: #e27482;
 $orange: rgba(242, 152, 74, 0.9);
-$grey: #272727;
+$grey: #353535;
+$light-grey: #bebebe;
+$green-loop: #57ec94;
 
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap&family=Comfortaa:wght@300;500;700');
+$test-green: #7fc3ae;
+$test-greener: #009d9e;
+$test-pink: #fac3c1;
+$test-pinker: #f38288;
+$test-blue: #85cdca;
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap&family=Comfortaa:wght@300;500;700&amily=Sora:wght@100;300;500;700&display=swap&family=Roboto:wght@100;300;500;700&display=swap");
 
 // @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Indie+Flower&family=Manrope:wght@200;400;700&family=Oxygen:wght@300;400;700&family=Sora:wght@100;300;500;700&display=swap');
 
@@ -98,7 +106,7 @@ body {
   }
 
   a {
-    font-family: 'Comfortaa', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Comfortaa", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     text-shadow: 1px 1px 1px $blue;
 
@@ -115,13 +123,18 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 10vh;
-  background: $yellow-linear;
-  padding-right: 5vw;
-  font-family: 'Send Flowers', sans-serif;
+  font-family: "Sora", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  border-bottom: 2px solid $light-grey;
+
+  .header-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
 
   &.sticky {
     position: fixed;
@@ -130,32 +143,42 @@ header {
     z-index: 3;
   }
 
-  #svg-container {
-    height: 100%;
-    width: 25vw;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  #name {
+    margin-left: 3.3rem;
+    font-size: 3.3rem;
+    font-weight: 700;
+
+    span {
+      font-family: "Times New Roman", Times, serif;
+      color: $orange;
+    }
 
     &:hover {
       transform: scale(1.1);
+      transition: all 0.5s ease;
       cursor: pointer;
     }
   }
 
   #links {
-    @include flexCenter();
-    gap: 7rem;
-    font-size: 4rem;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 15vw;
+    gap: 5rem;
+
+    .nav--active {
+      border-bottom: 2px solid $orange;
+    }
 
     a {
-      padding: 1.5rem;
-      color: white;
+      font-size: 2rem;
+      font-weight: 500;
+      color: black;
       transition: all 0.5s ease;
 
       &:hover {
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.33);
-        color: $blue;
+        color: $orange;
       }
     }
   }
@@ -167,47 +190,108 @@ header {
 /* ----------- MAIN ----------- */
 
 #main {
-  margin-top: 10rem;
   /* HOME */
 
   #home {
-    padding: 10vh 5vw;
+    margin-top: 10vh;
     @include flexCenter();
 
     #home-content {
       display: flex;
       position: relative;
-      background-color: $light-blue;
-      z-index: -2;
-      padding: 10%;
-      border-radius: 1% 33% 50% 50%;
-
-      span {
-        color: $orange;
-      }
+      font-family: "Sora", sans-serif;
 
       img {
-        height: 60%;
+        height: 100%;
+        width: 100%;
+      }
+
+      .half-home {
         width: 60%;
-        border-radius: 3% 10% 20% 33%;
+        border-right: 2px solid $light-grey;
+      }
+
+      .quarter-home {
+        width: 40%;
       }
 
       .column-wrapper {
-        margin-left: 3vw;
-        text-align: center;
-        max-width: 40%;
-        max-height: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: 10rem;
+        width: 70%;
+
+        img {
+          margin-left: auto;
+          height: 125px;
+          width: 125px;
+        }
+
+        p {
+          margin-top: 10rem;
+          font-size: 2.5rem;
+          color: $grey;
+          line-height: 1.5;
+
+          a {
+            color: $green-loop;
+
+            &:hover {
+              cursor: pointer !important;
+            }
+          }
+        }
+
+        .wrapper {
+          display: flex;
+          justify-content: space-around;
+          font-size: 3.3rem;
+          font-weight: 700;
+
+          p {
+            margin-top: 5rem;
+
+            a {
+              color: $orange;
+              position: relative;
+              top: 5px;
+              font-size: 4rem;
+            }
+          }
+        }
+      }
+
+      .welcome-infinite {
+        animation: 2s ease infinite welcome-infinite;
       }
 
       h2 {
-        font-family: 'Fredericka the Great', sans-serif;
+        text-align: center;
         font-size: 4rem;
+        font-weight: 500;
         margin-bottom: 2.5vh;
         color: $orange;
+
+        .highlights {
+          display: inline-block;
+        }
+
+        .welcome {
+          animation: 0.5s ease-in welcome-appears;
+        }
+      }
+
+      h1 {
+        margin-top: 2rem;
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 1.5;
+        span {
+          font-weight: 700;
+        }
       }
 
       p {
-        font-family: 'Indie Flower', sans-serif;
         font-size: 3rem;
       }
     }
@@ -215,7 +299,6 @@ header {
 
   /* PROJECTS */
   #projects {
-    padding-top: 10vh;
     position: relative;
 
     #projects-title {
@@ -226,7 +309,7 @@ header {
       background-color: $pink;
 
       p {
-        font-family: 'Send Flowers', sans-serif;
+        font-family: "Send Flowers", sans-serif;
         font-size: 4rem;
         color: white;
       }
@@ -275,7 +358,7 @@ header {
 
               &.github {
                 &:hover::before {
-                  content: 'Lien GitHub';
+                  content: "Lien GitHub";
                   color: white;
                   font-size: 15px;
                   background-color: rgba(0, 0, 0, 0.653);
@@ -328,11 +411,11 @@ header {
     width: 100%;
   }
   #waves-1 {
-    background-image: url('../images/waves-1.svg');
+    background-image: url("../images/waves-1.svg");
   }
   #waves-2 {
     transform: scaleY(-1);
-    background-image: url('../images/waves-2.svg');
+    background-image: url("../images/waves-2.svg");
   }
 
   #about {
@@ -343,7 +426,7 @@ header {
       flex-wrap: wrap;
       gap: 10vw;
       padding: 10vh;
-      font-family: 'Comfortaa', sans-serif;
+      font-family: "Comfortaa", sans-serif;
 
       img {
         height: 33px;
@@ -354,7 +437,7 @@ header {
       }
 
       h1 {
-        font-family: 'Fredericka the Great', sans-serif;
+        font-family: "Fredericka the Great", sans-serif;
         text-align: center;
         font-size: 3rem;
         color: white;
@@ -403,15 +486,15 @@ header {
       gap: 5vw;
       max-height: 70rem;
       padding: 15vh 10vw;
-      font-family: 'Comfortaa', sans-serif;
-      background-image: url('../images/fond-contact.png');
+      font-family: "Comfortaa", sans-serif;
+      background-image: url("../images/fond-contact.png");
       background-position: center;
       background-size: 90%;
       background-repeat: no-repeat;
       font-size: 2rem;
 
       h2 {
-        font-family: 'Indie Flower', sans-serif;
+        font-family: "Indie Flower", sans-serif;
         position: relative;
         bottom: 5vh;
         font-size: 4rem;
@@ -765,5 +848,28 @@ header {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@keyframes welcome-appears {
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes welcome-infinite {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }

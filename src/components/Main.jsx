@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-import Home from './Home';
-import Projects from './Projects';
-import Contact from './Contact';
+import Home from "./Home";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 function Main() {
   // Lazy images loading
@@ -14,9 +14,9 @@ function Main() {
 
     entry.target.src = entry.target.dataset.src;
 
-    entry.target.addEventListener('load', function () {
+    entry.target.addEventListener("load", function () {
       setTimeout(() => {
-        entry.target.classList.remove('lazy-img');
+        entry.target.classList.remove("lazy-img");
       }, 200);
     });
 
@@ -28,15 +28,37 @@ function Main() {
     threshold: 0.25,
   });
 
-  // Revealing sections with scroll
-
   const revealSection = function (entries, observer) {
     const [entry] = entries;
 
     if (!entry.isIntersecting) return;
 
-    entry.target.classList.remove('section__hidden');
+    entry.target.classList.remove("section__hidden");
     observer.unobserve(entry.target);
+  };
+
+  const observeNavs = function (entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    let className;
+    const list = [...entry.target.classList];
+    if (list) {
+      if (list.length > 2)
+        className = list.find(
+          (name) => name !== "section" && name !== "section__hidden"
+        );
+      if (list.length <= 2) className = list.find((name) => name !== "section");
+    }
+
+    const navItems = document.querySelectorAll(".nav");
+
+    navItems.forEach((nav) => {
+      nav.classList.contains(className)
+        ? nav.classList.add("nav--active")
+        : nav.classList.remove("nav--active");
+    });
   };
 
   const sectionObserver = new IntersectionObserver(revealSection, {
@@ -44,14 +66,19 @@ function Main() {
     threshold: 0.15,
   });
 
+  const navObserver = new IntersectionObserver(observeNavs, {
+    root: null,
+    threshold: 0,
+  });
+
   // Sticky nav bar
 
   const stickyNav = function (entries) {
-    const header = document.querySelector('header');
+    const header = document.querySelector("header");
     const [entry] = entries;
 
-    if (!entry.isIntersecting) header.classList.add('sticky');
-    else header.classList.remove('sticky');
+    if (!entry.isIntersecting) header.classList.add("sticky");
+    else header.classList.remove("sticky");
   };
 
   const headerObserver = new IntersectionObserver(stickyNav, {
@@ -59,16 +86,17 @@ function Main() {
     threshold: 0,
     rootMargin: `-300px`,
   });
-
   useEffect(() => {
     document
-      .querySelectorAll('img[data-src]')
+      .querySelectorAll("img[data-src]")
       .forEach((img) => imgObserver.observe(img));
 
-    document.querySelectorAll('.section').forEach(function (section) {
+    document.querySelectorAll(".section").forEach(function (section) {
       sectionObserver.observe(section);
 
-      headerObserver.observe(document.querySelector('#home'));
+      navObserver.observe(section);
+
+      headerObserver.observe(document.querySelector("#home"));
     });
   }, []);
 

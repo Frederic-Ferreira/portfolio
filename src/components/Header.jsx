@@ -1,39 +1,36 @@
-import { useEffect, useState } from 'react';
-import Lottie from 'lottie-web';
-
-import NameAnimation from '../animations/name.json';
-
 function Header() {
   const handleClick = (e) => {
-    const overlay = document.getElementById('side-bar');
-    const contains = overlay.classList.contains('hidden')
-      ? 'hidden'
-      : 'visible';
-    const add = overlay.classList.contains('hidden')
-      ? 'visible'
-      : 'hidden';
+    const overlay = document.getElementById("side-bar");
+    const contains = overlay.classList.contains("hidden")
+      ? "hidden"
+      : "visible";
+    const add = overlay.classList.contains("hidden") ? "visible" : "hidden";
 
-    e.target.classList.toggle('active');
+    e.target.classList.toggle("active");
     overlay.classList.remove(contains);
     overlay.classList.add(add);
   };
 
-  useEffect(() => {
-    Lottie.loadAnimation({
-      container: document.getElementById('svg-container'),
-      animationData: NameAnimation,
-      loop: false,
-    });
-  }, []);
-
   return (
     <header>
-      <div id="svg-container"></div>
-      <div id="links">
-        <a href="#">Accueil</a>
-        <a href="#projects">Projets</a>
-        <a href="#about">A propos</a>
-        <i onClick={handleClick} className="bi bi-list"></i>
+      <div className="header-container">
+        <div id="name">
+          <p>
+            Frédéric Ferreira <span>.</span>
+          </p>
+        </div>
+        <div id="links">
+          <a className="nav home" href="#">
+            Accueil
+          </a>
+          <a className="nav projects" href="#projects">
+            Projets
+          </a>
+          <a className="nav contact" href="#about">
+            A propos
+          </a>
+          <i onClick={handleClick} className="bi bi-list"></i>
+        </div>
       </div>
     </header>
   );

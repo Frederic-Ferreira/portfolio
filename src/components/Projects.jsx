@@ -1,15 +1,15 @@
-import memory from '../videos/memory.mp4';
-import shoepify from '../videos/shoepify.mp4';
-import todo from '../videos/todo.mp4';
-import weather from '../videos/weather.mp4';
+import memory from "../videos/memory.mp4";
+import shoepify from "../videos/shoepify.mp4";
+import todo from "../videos/todo.mp4";
+import weather from "../videos/weather.mp4";
 
-import memoryImg from '../images/memory-img.png';
-import afaire from '../images/afaire.png';
-import shoepi from '../images/shoepi.png';
-import meteo from '../images/meteo.png';
+import memoryImg from "../images/memory-img.png";
+import afaire from "../images/afaire.png";
+import shoepi from "../images/shoepi.png";
+import meteo from "../images/meteo.png";
 
-import github from '../images/github.png';
-import netlify from '../images/netlify.png';
+import github from "../images/github.png";
+import netlify from "../images/netlify.png";
 
 function Projects() {
   const autoPlay = (e) => {
@@ -22,14 +22,14 @@ function Projects() {
 
   return (
     <div id="projects">
-      <div className="section section__hidden" id="projects-title">
+      <div className="section section__hidden projects" id="projects-title">
         <p>
-          Durant mon apprentissage, j'ai eu l'occasion de travailler
-          sur de multiples projets ... mais il y a quatre d'entre eux
-          sur lesquels j'ai porté une attention plus particulière.
+          Durant mon apprentissage, j'ai eu l'occasion de travailler sur de
+          multiples projets ... mais il y a quatre d'entre eux sur lesquels j'ai
+          porté une attention plus particulière.
         </p>
       </div>
-      <div className="section section__hidden" id="projects-content">
+      <div className="section section__hidden projects" id="projects-content">
         <ul>
           <li>
             <video
