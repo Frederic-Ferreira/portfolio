@@ -1,10 +1,10 @@
-import img from "../images/profile.jpg";
-import lazy from "../images/lazy-profile.jpg";
+import img from "../images/profile.png";
+import lazy from "../images/lazy-profile.png";
 
 import js from "../images/js.png";
 import sass from "../images/sass.png";
 import redux from "../images/redux.png";
-import react from "../images/react.png";
+import react from "../images/react-rond.png";
 import vite from "../images/vite.png";
 import node from "../images/node.png";
 
@@ -40,7 +40,7 @@ function Contact() {
             <span className="bold">Vite</span> (sait utiliser WebPack et Parcel)
           </p>
           <p>
-            <img src={node} alt="logo node js" /> JavaScript Runtime :
+            <img src={node} alt="logo node js" /> Backend :
             <span className="bold">Node JS</span>
           </p>
         </div>

@@ -8,6 +8,7 @@ $blue: #1c92d2;
 $light-pink: #ffdde1;
 $pink: #e27482;
 $orange: rgba(242, 152, 74, 0.9);
+$dark: #202020;
 $grey: #353535;
 $light-grey: #bebebe;
 $green-loop: #57ec94;
@@ -208,10 +209,10 @@ header {
 
       .half-home {
         width: 60%;
-        border-right: 2px solid $light-grey;
       }
 
       .quarter-home {
+        border-right: 2px solid $light-grey;
         width: 40%;
       }
 
@@ -234,7 +235,7 @@ header {
           line-height: 1.5;
 
           a {
-            color: $green-loop;
+            color: $orange;
 
             &:hover {
               cursor: pointer !important;
@@ -304,13 +305,14 @@ header {
     #projects-title {
       @include flexCenter();
       padding: 5vh 10vw;
-      max-height: 25rem;
+      height: 23rem;
       width: 100%;
-      background-color: $pink;
+      background-color: $grey;
 
       p {
-        font-family: "Send Flowers", sans-serif;
-        font-size: 4rem;
+        font-family: "Sora", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 300;
         color: white;
       }
     }
@@ -319,31 +321,36 @@ header {
       margin-top: 5%;
       padding: 10vh;
 
-      hr {
-        background-color: $pink;
-        border: none;
-        width: 3px;
-
-        height: 33rem;
-      }
-
       ul {
         @include flexCenter();
         flex-wrap: wrap;
         column-gap: 10rem;
 
         li {
+          margin-bottom: 5rem;
+
+          #memory {
+            box-shadow: #54768b 0px 22px 70px 4px;
+          }
+          #shoepify {
+            box-shadow: #dee2f5 0px 22px 70px 4px;
+          }
+          #weather {
+            box-shadow: #73a3e5 0px 22px 70px 4px;
+          }
+          #todo {
+            box-shadow: #78c5c3 0px 22px 70px 4px;
+          }
+
           video {
-            border: 3px solid $grey;
             border-radius: 5px;
-            height: 200px;
-            width: 400px;
+            height: 500px;
+            width: 850px;
             transition: all ease 0.3s;
             object-fit: fill;
 
             &:hover {
               cursor: pointer;
-              transform: scale(1.1);
             }
           }
 
@@ -351,46 +358,22 @@ header {
             margin-top: 5%;
             width: 100%;
             @include flexCenter();
-            gap: 5vw;
+
+            p {
+              font-family: "Sora", sans-serif;
+              font-size: 1.5rem;
+              color: $grey;
+            }
 
             a {
+              margin: 0 2rem;
               position: relative;
-
-              &.github {
-                &:hover::before {
-                  content: "Lien GitHub";
-                  color: white;
-                  font-size: 15px;
-                  background-color: rgba(0, 0, 0, 0.653);
-                  @include flexCenter();
-                  height: 4rem;
-                  width: 8.5rem;
-                  position: absolute;
-                  left: -11rem;
-                  top: 1rem;
-                }
-              }
-
-              &.netlify {
-                &:hover::after {
-                  content: "Démo de l'application";
-                  color: white;
-                  font-size: 15px;
-                  background-color: rgba(0, 0, 0, 0.653);
-                  @include flexCenter();
-                  height: 4rem;
-                  width: 15rem;
-                  position: absolute;
-                  left: 9rem;
-                  top: 1rem;
-                }
-              }
             }
 
             img {
               background-color: white;
               padding: 5px;
-              border: 2px solid $orange;
+              border: 2px solid $grey;
               border-radius: 50%;
               height: 50px;
               width: 50px;
@@ -402,23 +385,9 @@ header {
   }
 
   /* CONTACT */
-  #waves-1,
-  #waves-2 {
-    aspect-ratio: 960/33;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-  }
-  #waves-1 {
-    background-image: url("../images/waves-1.svg");
-  }
-  #waves-2 {
-    transform: scaleY(-1);
-    background-image: url("../images/waves-2.svg");
-  }
-
   #about {
+    background-color: $grey;
+
     #skills-set {
       min-height: 70vh;
       display: flex;
@@ -426,7 +395,7 @@ header {
       flex-wrap: wrap;
       gap: 10vw;
       padding: 10vh;
-      font-family: "Comfortaa", sans-serif;
+      font-family: "Sora", sans-serif;
 
       img {
         height: 33px;
@@ -437,11 +406,11 @@ header {
       }
 
       h1 {
-        font-family: "Fredericka the Great", sans-serif;
+        font-weight: 500;
         text-align: center;
         font-size: 3rem;
         color: white;
-        background-color: $pink;
+        background-color: $orange;
         padding: 1.5rem;
         border-radius: 33px;
         margin-bottom: 3rem;
@@ -456,6 +425,7 @@ header {
       #setup {
         p {
           position: relative;
+          color: white;
         }
 
         img {
@@ -486,28 +456,26 @@ header {
       gap: 5vw;
       max-height: 70rem;
       padding: 15vh 10vw;
-      font-family: "Comfortaa", sans-serif;
-      background-image: url("../images/fond-contact.png");
       background-position: center;
       background-size: 90%;
       background-repeat: no-repeat;
       font-size: 2rem;
+      color: white;
+      font-family: "Sora", sans-serif;
 
       h2 {
-        font-family: "Indie Flower", sans-serif;
         position: relative;
         bottom: 5vh;
         font-size: 4rem;
-        text-decoration: underline;
-        color: $light-pink;
+        font-weight: 500;
       }
 
       // margin-top: 10rem;
 
       img {
-        height: 50%;
-        width: 40%;
-        border-radius: 10px;
+        height: 400px;
+        width: 600px;
+        border-radius: 5px;
       }
 
       #text {
@@ -515,9 +483,8 @@ header {
 
         #infos {
           span {
-            border-bottom: 1px solid black;
-            font-weight: bold;
-            color: $grey;
+            font-weight: 500;
+            color: $orange;
           }
 
           p {

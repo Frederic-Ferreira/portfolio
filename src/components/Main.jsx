@@ -25,7 +25,7 @@ function Main() {
 
   const imgObserver = new IntersectionObserver(loadImg, {
     root: null,
-    threshold: 0.25,
+    threshold: 0,
   });
 
   const revealSection = function (entries, observer) {
@@ -40,10 +40,15 @@ function Main() {
   const observeNavs = function (entries, observer) {
     const [entry] = entries;
 
-    if (!entry.isIntersecting) return;
+    if (
+      !entry.isIntersecting ||
+      entry.target.classList.contains("projects--message")
+    )
+      return;
 
     let className;
     const list = [...entry.target.classList];
+
     if (list) {
       if (list.length > 2)
         className = list.find(

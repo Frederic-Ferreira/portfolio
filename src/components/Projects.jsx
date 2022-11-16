@@ -22,7 +22,10 @@ function Projects() {
 
   return (
     <div id="projects">
-      <div className="section section__hidden projects" id="projects-title">
+      <div
+        className="section section__hidden projects--message"
+        id="projects-title"
+      >
         <p>
           Durant mon apprentissage, j'ai eu l'occasion de travailler sur de
           multiples projets ... mais il y a quatre d'entre eux sur lesquels j'ai
@@ -33,6 +36,7 @@ function Projects() {
         <ul>
           <li>
             <video
+              id="memory"
               onMouseEnter={autoPlay}
               onMouseLeave={stopPlay}
               poster={memoryImg}
@@ -40,6 +44,7 @@ function Projects() {
               <source src={memory} />
             </video>
             <div className="row-wrapper">
+              <p>Lien GitHub</p>
               <a
                 className="github"
                 target="_blank"
@@ -54,11 +59,12 @@ function Projects() {
               >
                 <img src={netlify} alt="lien du preview de l'app" />
               </a>
+              <p>Lien Application</p>
             </div>
           </li>
-          <hr />
           <li>
             <video
+              id="shoepify"
               onMouseEnter={autoPlay}
               onMouseLeave={stopPlay}
               poster={shoepi}
@@ -66,6 +72,7 @@ function Projects() {
               <source src={shoepify} />
             </video>
             <div className="row-wrapper">
+              <p>Lien GitHub</p>
               <a
                 className="github"
                 target="_blank"
@@ -80,10 +87,12 @@ function Projects() {
               >
                 <img src={netlify} alt="lien du preview de l'app" />
               </a>
+              <p>Lien Application</p>
             </div>
           </li>
           <li>
             <video
+              id="weather"
               onMouseEnter={autoPlay}
               onMouseLeave={stopPlay}
               poster={meteo}
@@ -91,6 +100,7 @@ function Projects() {
               <source src={weather} />
             </video>
             <div className="row-wrapper">
+              <p>Lien GitHub</p>
               <a
                 className="github"
                 target="_blank"
@@ -105,11 +115,12 @@ function Projects() {
               >
                 <img src={netlify} alt="lien du preview de l'app" />
               </a>
+              <p>Lien Application</p>
             </div>
           </li>
-          <hr />
           <li>
             <video
+              id="todo"
               onMouseEnter={autoPlay}
               onMouseLeave={stopPlay}
               poster={afaire}
@@ -117,6 +128,7 @@ function Projects() {
               <source src={todo} />
             </video>
             <div className="row-wrapper">
+              <p>Lien GitHub</p>
               <a
                 className="github"
                 target="_blank"
@@ -131,6 +143,7 @@ function Projects() {
               >
                 <img src={netlify} alt="lien du preview de l'app" />
               </a>
+              <p>Lien Application</p>
             </div>
           </li>
         </ul>
