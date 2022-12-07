@@ -109,8 +109,6 @@ function Main() {
     <div id="main">
       <Home />
       <Projects />
-      <div id="waves-1"></div>
-      <div id="waves-2"></div>
       <Contact />
     </div>
   );

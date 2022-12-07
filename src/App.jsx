@@ -19,7 +19,6 @@ function App() {
   return (
     <div className="App">
       <div className="hidden" id="side-bar">
-        <i onClick={handleClick} className="bi bi-x-lg"></i>
         <a onClick={handleClick} href="#">
           Accueil
         </a>
