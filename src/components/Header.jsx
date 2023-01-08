@@ -1,15 +1,13 @@
 function Header() {
   const handleClick = (e) => {
-    const overlay = document.getElementById("side-bar");
-    const contains = overlay.classList.contains("hidden")
-      ? "hidden"
-      : "visible";
-    const add = overlay.classList.contains("hidden") ? "visible" : "hidden";
+    const overlay = document.getElementById('side-bar')
+    const contains = overlay.classList.contains('hidden') ? 'hidden' : 'visible'
+    const add = overlay.classList.contains('hidden') ? 'visible' : 'hidden'
 
-    e.target.classList.toggle("active");
-    overlay.classList.remove(contains);
-    overlay.classList.add(add);
-  };
+    e.target.classList.toggle('active')
+    overlay.classList.remove(contains)
+    overlay.classList.add(add)
+  }
 
   return (
     <header>
@@ -33,7 +31,7 @@ function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

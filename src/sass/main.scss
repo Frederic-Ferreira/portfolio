@@ -20,7 +20,7 @@ $test-pink: #fac3c1;
 $test-pinker: #f38288;
 $test-blue: #85cdca;
 
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap&family=Comfortaa:wght@300;500;700&amily=Sora:wght@100;300;500;700&display=swap&family=Roboto:wght@100;300;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Send+Flowers&display=swap&family=Comfortaa:wght@300;500;700&amily=Sora:wght@100;300;500;700&display=swap&family=Roboto:wght@100;300;500;700&display=swap');
 
 // @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Indie+Flower&family=Manrope:wght@200;400;700&family=Oxygen:wght@300;400;700&family=Sora:wght@100;300;500;700&display=swap');
 
@@ -72,16 +72,16 @@ body {
   transform: rotate(-90deg);
 }
 
-// .hidden {
-//   display: none !important;
-// }
+.hidden {
+  display: none !important;
+}
 
 .show {
   display: flex;
 }
 /* ----------- SIDEBAR OVERLAY ----------- */
 
-.hidden{
+.hidden {
   top: -100vh !important;
 }
 
@@ -97,9 +97,8 @@ body {
   width: 100%;
   background-color: $orange-faded;
   animation: 0.5s ease overlay-appears;
-  transition: top 0.5s; 
+  transition: top 0.5s;
   z-index: 3;
-
 
   .bi {
     position: absolute;
@@ -114,7 +113,7 @@ body {
   }
 
   a {
-    font-family: "Comfortaa", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Comfortaa', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     text-shadow: 1px 1px 1px black;
 
@@ -132,7 +131,7 @@ header {
   top: 0;
   width: 100%;
   height: 10vh;
-  font-family: "Sora", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Sora', Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
   border-bottom: 2px solid $light-grey;
 
@@ -157,7 +156,7 @@ header {
     font-weight: 700;
 
     span {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Times New Roman', Times, serif;
       color: $orange;
     }
 
@@ -207,7 +206,7 @@ header {
     #home-content {
       display: flex;
       position: relative;
-      font-family: "Sora", sans-serif;
+      font-family: 'Sora', sans-serif;
 
       img {
         height: 100%;
@@ -317,7 +316,7 @@ header {
       background-color: $grey;
 
       p {
-        font-family: "Sora", sans-serif;
+        font-family: 'Sora', sans-serif;
         font-size: 2.5rem;
         font-weight: 300;
         color: white;
@@ -367,7 +366,7 @@ header {
             @include flexCenter();
 
             p {
-              font-family: "Sora", sans-serif;
+              font-family: 'Sora', sans-serif;
               font-size: 1.5rem;
               color: $grey;
             }
@@ -402,7 +401,7 @@ header {
       flex-wrap: wrap;
       gap: 10vw;
       padding: 10vh;
-      font-family: "Sora", sans-serif;
+      font-family: 'Sora', sans-serif;
 
       img {
         height: 33px;
@@ -463,13 +462,13 @@ header {
       gap: 5vw;
       max-height: 70rem;
       padding: 15vh 10vw;
-      background-image: url("../images/fond-contact.png");
+      background-image: url('../images/fond-contact.png');
       background-position: 60% 50%;
       background-size: 40%;
       background-repeat: no-repeat;
       font-size: 2rem;
       color: white;
-      font-family: "Sora", sans-serif;
+      font-family: 'Sora', sans-serif;
 
       h2 {
         position: relative;
@@ -513,9 +512,7 @@ header {
 /* ----------- MEDIA QUERIES ----------- */
 
 @media screen and (max-width: 1280px) {
-
   #main {
-
     #about #contact {
       background-size: 50%;
     }
@@ -523,24 +520,22 @@ header {
 }
 
 @media (max-width: 1160px) {
-  #main
-  
-  #home #home-content{
+  #main #home #home-content {
     .quarter-home {
       width: 50%;
     }
-    .half-home{
-      img{
+    .half-home {
+      img {
         height: 100px;
         width: 100px;
       }
-      h1{
+      h1 {
         font-size: 3rem;
       }
     }
 
-    .column-wrapper{
-      p{
+    .column-wrapper {
+      p {
         font-size: 2rem;
       }
     }
@@ -548,15 +543,15 @@ header {
   #main #projects #projects-title {
     p {
       font-size: 2rem;
-    }    
+    }
   }
 
   #main #projects #projects-content ul li {
     margin-bottom: 10rem;
-   video{
-    height: 450px;
-    width: 750px;
-   }
+    video {
+      height: 450px;
+      width: 750px;
+    }
   }
 
   #main #about #contact {
@@ -564,63 +559,62 @@ header {
   }
 
   #main #about #skills-set {
-    #skills, #setup{
+    #skills,
+    #setup {
       font-size: 2rem;
     }
-    h1{
+    h1 {
       font-size: 2rem;
       padding: 1rem;
     }
   }
 
   #main #about #contact {
-      
-      img{
-        width: 500px;
-        height: 350px;
+    img {
+      width: 500px;
+      height: 350px;
+    }
+
+    background-size: 50%;
+
+    h2 {
+      font-size: 3.3rem;
+    }
+
+    #text #infos {
+      p {
+        font-size: 1.75rem;
       }
-
-      background-size: 50%;
-
-      h2{
-        font-size: 3.3rem;
-      }
-
-      #text #infos {
-        p{
-          font-size: 1.75rem;
-        }
-       span{
+      span {
         font-size: 1.75rem;
       }
     }
-    }
+  }
 }
 
 @media (max-width: 960px) {
   header #links {
     margin-right: 5vw;
-    a{
-    font-size: 1.75rem;
+    a {
+      font-size: 1.75rem;
+    }
   }
-  }
-  
 
   #main {
     #home #home-content {
-      .half-home{
+      .half-home {
         width: 50%;
-        img{
+        img {
           height: 80px;
           width: 80px;
         }
-        h1{
+        h1 {
           font-size: 2.5rem;
         }
       }
-  
-      .column-wrapper{
-        p{
+
+      .column-wrapper {
+        p {
           font-size: 1.75rem;
         }
 
@@ -640,49 +634,48 @@ header {
       }
     }
 
-     #projects #projects-content ul li {
+    #projects #projects-content ul li {
       margin-bottom: 7.5rem;
-     video{
-      height: 400px;
-      width: 650px;
-     }
+      video {
+        height: 400px;
+        width: 650px;
+      }
     }
 
     #about {
-      #contact{
+      #contact {
         background-size: 60%;
       }
       #skills-set {
         @include flexColumn();
         align-items: center;
-  
+
         & h1 {
           font-size: 2.5rem;
           padding: 1.25vw;
         }
-  
       }
     }
   }
 }
 
 @media screen and (max-width: 810px) {
-  #main #home #home-content .half-home{
+  #main #home #home-content .half-home {
     padding-right: 1rem;
-    img{
+    img {
       height: 70px;
       width: 70px;
     }
-    h1{
+    h1 {
       font-size: 2.25rem;
     }
 
-    .column-wrapper{
-      p{
+    .column-wrapper {
+      p {
         font-size: 1.75rem;
       }
-      .wrapper{
-        a{
+      .wrapper {
+        a {
           font-size: 3.3rem;
         }
       }
@@ -690,10 +683,10 @@ header {
   }
 
   #main #about {
-    #contact{
+    #contact {
       background-size: 60%;
 
-      img{
+      img {
         width: 450px;
         height: 300px;
       }
@@ -708,38 +701,38 @@ header {
       #setup h1 {
         margin-left: 5rem;
       }
-      #skills p, #setup p {
+      #skills p,
+      #setup p {
         font-size: 1.75rem;
       }
     }
   }
-
 }
 
 @media (max-width: 700px) {
   header {
-    #name{
+    #name {
       font-size: 2.5rem;
     }
     #links {
-      a{
+      a {
         font-size: 1.25rem;
       }
     }
   }
 
-  #main #home #home-content .half-home{
+  #main #home #home-content .half-home {
     padding-right: 2rem;
 
-    .column-wrapper{
-      p{
+    .column-wrapper {
+      p {
         font-size: 1.5rem;
       }
-      .wrapper{
-        p{
+      .wrapper {
+        p {
           margin-left: 1rem;
         }
-        a{
+        a {
           font-size: 3.3rem;
         }
       }
@@ -763,10 +756,10 @@ header {
 
     #projects #projects-content ul li {
       margin-bottom: 7.5rem;
-     video{
-      height: 300px;
-      width: 450px;
-     }
+      video {
+        height: 300px;
+        width: 450px;
+      }
     }
 
     #projects #projects-content ul li .row-wrapper img {
@@ -791,7 +784,7 @@ header {
         font-size: 2.25rem;
       }
 
-      img{
+      img {
         width: 320px;
         height: 300px;
       }
@@ -819,24 +812,24 @@ header {
     }
   }
 
-  #main #home #home-content .half-home{
+  #main #home #home-content .half-home {
     padding-right: 1rem;
-    img{
+    img {
       height: 50px;
       width: 50px;
     }
-    h1{
+    h1 {
       font-size: 2rem;
     }
 
-    .column-wrapper{
+    .column-wrapper {
       margin: 5rem;
       width: 50%;
-      p{
+      p {
         font-size: 1.5rem;
       }
-      .wrapper{
-        a{
+      .wrapper {
+        a {
           font-size: 3.3rem;
         }
       }
@@ -844,27 +837,26 @@ header {
   }
 
   #main #about #contact {
-      
-      img{
-        width: 250px;
-        height: 250px;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+    background-size: 70%;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    #text #infos {
+      p {
+        font-size: 1.5rem;
       }
-
-      background-size: 70%;
-
-      h2{
-        font-size: 2.5rem;
-      }
-
-      #text #infos {
-        p{
-          font-size: 1.5rem;
-        }
-       span{
+      span {
         font-size: 1.75rem;
       }
     }
-    }
+  }
 }
 
 @media (max-width: 490px) {
@@ -885,30 +877,41 @@ header {
       }
     }
 
-     #projects #projects-content ul li {
+    #projects #projects-content ul li {
       margin-bottom: 7.5rem;
-     video{
-      height: 300px;
-      width: 400px;
-     }
+      video {
+        height: 300px;
+        width: 400px;
+      }
     }
 
     #about #skills-set {
-      #skills{
+      #skills {
         max-width: 50vw;
       }
-      h1{
+      h1 {
         max-width: 50vw;
         padding: 1rem 2rem;
       }
     }
-    
 
     #about #contact {
       & h2 {
         position: static;
       }
       background-size: 70%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  #main #about #contact {
+    img {
+      visibility: hidden;
+    }
+
+    #text {
+      position: relative;
+      right: 100px;
     }
   }
 }
@@ -919,9 +922,9 @@ header {
     z-index: 10000;
   }
 
-  #main #home #home-content .quarter-home{
+  #main #home #home-content .quarter-home {
     width: 0%;
-    img{
+    img {
       height: 500px;
       width: 300px;
       position: absolute;
@@ -930,35 +933,36 @@ header {
     }
   }
 
-  #main #home #home-content .half-home{
-    margin-left: 3.3rem;
+  #main #home #home-content .half-home {
+    width: 100%;
+    margin-left: 5rem;
     padding-right: 1rem;
     z-index: 1000;
-    h2{
-      font-size: 1.5rem;
+    h2 {
+      font-size: 1.75rem;
       text-shadow: 0.5px 0.5px 0.5px white;
     }
-    img{
+    img {
       margin-top: 1rem;
       height: 50px;
       width: 50px;
     }
-    h1{
+    h1 {
       font-size: 2rem;
       color: white;
       text-shadow: 1px 1px 1px black;
     }
 
-    .column-wrapper{
+    .column-wrapper {
       margin: 5rem;
       width: 50%;
-      p{
+      p {
         margin-top: 15rem;
         font-size: 1.5rem;
       }
-      .wrapper{
+      .wrapper {
         margin-top: -10rem;
-        a{
+        a {
           font-size: 3.3rem;
         }
       }
@@ -966,48 +970,42 @@ header {
   }
   #main #projects #projects-content ul li {
     margin-bottom: 10rem;
-   video{
-    height: 200px;
-    width: 300px;
-   }
+    video {
+      height: 200px;
+      width: 300px;
+    }
   }
   #main #about #skills-set #skills p {
     font-size: 1.5rem;
   }
 
-  #main #about #skills-set #setup{
+  #main #about #skills-set #setup {
     margin-left: 2rem;
 
-    p{
+    p {
       font-size: 1.5rem;
     }
 
-    h1{
+    h1 {
       margin-left: 2rem;
     }
   }
 
   #main #about #contact {
-      
-    img{
-      width: 160px;
-      height: 150px;
-    }
-
     background-size: 70%;
 
-    h2{
+    h2 {
       font-size: 2.5rem;
     }
 
     #text #infos {
-      p{
+      p {
         font-size: 1.5rem;
       }
-     span{
-      font-size: 1.5rem;
+      span {
+        font-size: 1.5rem;
+      }
     }
-  }
   }
 }
 /* ----------- ANIMATIONS ----------- */

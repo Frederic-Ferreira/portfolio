@@ -1,35 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
-import img from "../images/fred.png";
-import react from "../images/react-rond.png";
-import lazy from "../images/fred-lazy.png";
+import img from '../images/fred.png'
+import react from '../images/react-rond.png'
+import lazy from '../images/fred-lazy.png'
 
 function Home() {
   useEffect(() => {
-    const spans = document.querySelectorAll(".welcome");
+    const spans = document.querySelectorAll('.welcome')
 
-    let char = 0;
-    let timer = setInterval(onTick, 50);
+    let char = 0
+    let timer = setInterval(onTick, 50)
 
     function onTick() {
-      const span = spans[char];
-      span.classList.remove("hidden");
-      char++;
+      const span = spans[char]
+      span.classList.remove('hidden')
+      char++
       if (char === spans.length) {
-        complete();
-        return;
+        complete()
+        return
       }
     }
 
     function complete() {
-      clearInterval(timer);
-      timer = null;
+      clearInterval(timer)
+      timer = null
     }
 
     setTimeout(() => {
-      document.querySelector("h2").classList.add("welcome-infinite");
-    }, 1000);
-  });
+      document.querySelector('h2').classList.add('welcome-infinite')
+    }, 1000)
+  })
   return (
     <section id="home">
       <div className="section section__hidden home" id="home-content">
@@ -78,7 +78,7 @@ function Home() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Home;
+export default Home
