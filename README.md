@@ -16,6 +16,6 @@ En plus des animations appartenant aux règles Sass avec des keyframes, vous ret
 
 Toutes ces spécificités fonctionnent grace à l'IntersectionOserver, une API publique intégrée à JavaScript.
 
-# Contact
+# Mockups & explications
 
-Vous pouvez me contacter par mail à l'adresse fred.69780@hotmail.fr
+Vous trouverez les mockups web et mobile dans le dossier intiutlé ainsi, avec le pdf concernant les spécifications techniques et design.
